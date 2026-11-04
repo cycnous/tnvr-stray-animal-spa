@@ -17,96 +17,96 @@
    1. 全域配色與 Design Tokens (CSS :root)
    -------------------------------------------------------------------------- */
 :root {
-    /* 品牌主要配色 (莫蘭迪泥灰) */
-    --primary-color: #2C3531;
-    /* 主色：深泥灰 (用於標題、重要框線) */
-    --primary-hover: #1E2522;
-    /* 深泥灰 Hover 狀態 */
-    --primary-light: #E8ECE9;
-    /* 淡泥灰襯底 */
+  /* 品牌主要配色 (莫蘭迪泥灰) */
+  --primary-color: #2C3531;
+  /* 主色：深泥灰 (用於標題、重要框線) */
+  --primary-hover: #1E2522;
+  /* 深泥灰 Hover 狀態 */
+  --primary-light: #E8ECE9;
+  /* 淡泥灰襯底 */
 
-    /* 品牌強調色 (暖大地砂黃) */
-    --accent-color: #D4A373;
-    /* 強調色：暖砂黃 (用於 CTA 按鈕、Hotspot 標記、剪耳重點) */
-    --accent-hover: #BC8A5A;
-    /* 暖砂黃 Hover 狀態 */
-    --accent-light: #FAF0E6;
-    /* 淡砂黃襯底 (用於標籤、提示框) */
+  /* 品牌強調色 (暖大地砂黃) */
+  --accent-color: #D4A373;
+  /* 強調色：暖砂黃 (用於 CTA 按鈕、Hotspot 標記、剪耳重點) */
+  --accent-hover: #BC8A5A;
+  /* 暖砂黃 Hover 狀態 */
+  --accent-light: #FAF0E6;
+  /* 淡砂黃襯底 (用於標籤、提示框) */
 
-    /* 背景與區塊色系 */
-    --bg-main: #F7F4EF;
-    /* 燕麥米色 (全站預設背景，溫暖親和、襯托照片) */
-    --bg-card: #FFFFFF;
-    /* 純白 (卡片與對比層級容器) */
-    --bg-alt: #EFECE6;
-    /* 深燕麥米 (交錯 Section 區隔) */
-    --bg-dark: #1A221E;
-    /* 深石墨綠灰 (用於 S01 Hero 與 S15 Footer 暗色沉浸區塊) */
+  /* 背景與區塊色系 */
+  --bg-main: #F7F4EF;
+  /* 燕麥米色 (全站預設背景，溫暖親和、襯托照片) */
+  --bg-card: #FFFFFF;
+  /* 純白 (卡片與對比層級容器) */
+  --bg-alt: #EFECE6;
+  /* 深燕麥米 (交錯 Section 區隔) */
+  --bg-dark: #1A221E;
+  /* 深石墨綠灰 (用於 S01 Hero 與 S15 Footer 暗色沉浸區塊) */
 
-    /* 文字階梯 (Typography Palette) */
-    --text-main: #2C3531;
-    /* 主文字：深泥灰 (閱讀舒適) */
-    --text-muted: #6C757D;
-    /* 次要文字：中灰 (說明文字、出處標註) */
-    --text-light: #F8F9FA;
-    /* 亮色文字 (暗色背景專用) */
+  /* 文字階梯 (Typography Palette) */
+  --text-main: #2C3531;
+  /* 主文字：深泥灰 (閱讀舒適) */
+  --text-muted: #6C757D;
+  /* 次要文字：中灰 (說明文字、出處標註) */
+  --text-light: #F8F9FA;
+  /* 亮色文字 (暗色背景專用) */
 
-    /* 邊框與結構線條 */
-    --border-color: #E2E8F0;
-    /* 卡片與區塊邊框線 */
-    --timeline-line: #CBD5E1;
-    /* S03 時間軸貫穿線條色 */
+  /* 邊框與結構線條 */
+  --border-color: #E2E8F0;
+  /* 卡片與區塊邊框線 */
+  --timeline-line: #CBD5E1;
+  /* S03 時間軸貫穿線條色 */
 
-    /* 功能狀態色 */
-    --success-color: #4A7C59;
-    /* 正確/Dos 規範標記 (綠) */
-    --danger-color: #C94A29;
-    /* 警告/Don'ts 規範標記 (紅) */
+  /* 功能狀態色 */
+  --success-color: #4A7C59;
+  /* 正確/Dos 規範標記 (綠) */
+  --danger-color: #C94A29;
+  /* 警告/Don'ts 規範標記 (紅) */
 
-    /* 字體宣告 (Font Families) */
-    --font-serif: 'Noto Serif TC', serif;
-    /* 大標題、Hero 標語、故事牆標題 */
-    --font-sans: 'Noto Sans TC', sans-serif;
-    /* 全站內文、導覽列、按鈕、數據數字 */
+  /* 字體宣告 (Font Families) */
+  --font-serif: 'Noto Serif TC', serif;
+  /* 大標題、Hero 標語、故事牆標題 */
+  --font-sans: 'Noto Sans TC', sans-serif;
+  /* 全站內文、導覽列、按鈕、數據數字 */
 
-    /* 圓角規範 */
-    --radius-sm: 8px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
-    --radius-pill: 50px;
+  /* 圓角規範 */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 50px;
 
-    /* 陰影規範 */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.1);
+  /* 陰影規範 */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.1);
 
-    /* 動畫過渡 */
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
+  /* 動畫過渡 */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
 }
 
 /* --------------------------------------------------------------------------
    2. 全域基礎設定 (Base Layout & Typography)
    -------------------------------------------------------------------------- */
 html {
-    scroll-behavior: smooth;
-    box-sizing: border-box;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg-main);
-    color: var(--text-main);
-    font-family: var(--font-sans);
-    line-height: 1.75;
-    -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* 標題套用思源宋體，建立人文雜誌感 */
@@ -115,96 +115,96 @@ h2,
 h3,
 .section-title,
 .hero-title {
-    font-family: var(--font-serif);
-    font-weight: 700;
-    color: var(--primary-color);
-    letter-spacing: -0.02em;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: -0.02em;
 }
 
 /* 通用 Section 留白規範 */
 section {
-    padding: 90px 0;
+  padding: 90px 0;
 }
 
 /* --------------------------------------------------------------------------
    3. Bootstrap Custom Navbar 覆蓋樣式
    -------------------------------------------------------------------------- */
 .custom-navbar {
-    height: 72px;
-    background-color: rgba(247, 244, 239, 0.88) !important;
-    /* 燕麥米半透明 */
-    backdrop-filter: blur(10px);
-    /* 毛玻璃效果 */
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(44, 53, 49, 0.08);
-    transition: all var(--transition-normal);
+  height: 72px;
+  background-color: rgba(247, 244, 239, 0.88) !important;
+  /* 燕麥米半透明 */
+  backdrop-filter: blur(10px);
+  /* 毛玻璃效果 */
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(44, 53, 49, 0.08);
+  transition: all var(--transition-normal);
 }
 
 .custom-navbar .navbar-brand {
-    color: var(--primary-color);
-    font-family: var(--font-serif);
-    font-size: 1.25rem;
+  color: var(--primary-color);
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
 }
 
 .custom-navbar .logo-icon {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 .custom-navbar .nav-link {
-    color: var(--text-main);
-    font-family: var(--font-sans);
-    font-weight: 500;
-    font-size: 0.95rem;
-    border-radius: var(--radius-sm);
-    transition: all var(--transition-fast);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
 }
 
 .custom-navbar .nav-link:hover,
 .custom-navbar .nav-link.active,
 .custom-navbar .show>.nav-link {
-    color: var(--accent-hover) !important;
-    background-color: var(--accent-light);
+  color: var(--accent-hover) !important;
+  background-color: var(--accent-light);
 }
 
 /* Navbar 下拉選單 */
 .custom-dropdown {
-    background-color: var(--bg-card);
-    border-radius: var(--radius-md) !important;
-    padding: 8px;
-    margin-top: 8px !important;
-    border: 1px solid var(--border-color) !important;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md) !important;
+  padding: 8px;
+  margin-top: 8px !important;
+  border: 1px solid var(--border-color) !important;
 }
 
 .custom-dropdown .dropdown-item {
-    color: var(--text-main);
-    font-family: var(--font-sans);
-    font-size: 0.92rem;
-    padding: 8px 16px;
-    border-radius: var(--radius-sm);
-    transition: all var(--transition-fast);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
 }
 
 .custom-dropdown .dropdown-item:hover {
-    background-color: var(--accent-light);
-    color: var(--accent-hover);
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
 }
 
 /* 1959 緊急通報按鈕 */
 .btn-emergency {
-    background-color: var(--accent-color);
-    color: #ffffff;
-    font-family: var(--font-sans);
-    font-weight: 600;
-    font-size: 0.9rem;
-    border: none;
-    box-shadow: 0 2px 8px rgba(212, 163, 115, 0.3);
-    transition: all var(--transition-fast);
+  background-color: var(--accent-color);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  box-shadow: 0 2px 8px rgba(212, 163, 115, 0.3);
+  transition: all var(--transition-fast);
 }
 
 .btn-emergency:hover {
-    background-color: var(--accent-hover);
-    color: #ffffff;
-    transform: translateY(-1px);
+  background-color: var(--accent-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 /* ==========================================================================
@@ -243,7 +243,8 @@ section {
   height: 100%;
   background-size: cover;
   background-position: center center;
-  transform: scale(1.05); /* 輕微放大，營造沉浸感 */
+  transform: scale(1.05);
+  /* 輕微放大，營造沉浸感 */
   transition: transform 8s ease;
 }
 
@@ -258,14 +259,13 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(26, 34, 30, 0.75) 0%,
-    rgba(26, 34, 30, 0.55) 50%,
-    rgba(26, 34, 30, 0.85) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(26, 34, 30, 0.75) 0%,
+      rgba(26, 34, 30, 0.55) 50%,
+      rgba(26, 34, 30, 0.85) 100%);
   z-index: 1;
-  pointer-events: none; /* 確保不影響點擊事件 */
+  pointer-events: none;
+  /* 確保不影響點擊事件 */
 }
 
 /* 文字內容區域 (Z-index: 2，確保浮在最上層) */
@@ -347,9 +347,22 @@ section {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-8px); }
-  60% { transform: translateY(-4px); }
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-8px);
+  }
+
+  60% {
+    transform: translateY(-4px);
+  }
 }
 
 /* ==========================================================================
@@ -357,7 +370,8 @@ section {
    ========================================================================== */
 
 #s02 {
-  background-color: var(--bg-main); /* 燕麥米色背景，與 S01 的深色做出區隔 */
+  background-color: var(--bg-main);
+  /* 燕麥米色背景，與 S01 的深色做出區隔 */
   position: relative;
 }
 
@@ -380,7 +394,8 @@ section {
 /* 卡片互動與質感設計 */
 #s02 .s02-card {
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-  border-top: 4px solid var(--accent-color) !important; /* 頂部點綴暖砂黃邊框 */
+  border-top: 4px solid var(--accent-color) !important;
+  /* 頂部點綴暖砂黃邊框 */
 }
 
 #s02 .s02-card:hover {
@@ -399,14 +414,198 @@ section {
   font-size: 1.2rem;
 }
 
+/* ==========================================================================
+   S03 TNVR 4 步驟圖文交錯時間軸樣式 (以 #s03 進行範圍限定)
+   ========================================================================== */
+
+#s03 {
+  background-color: var(--bg-card);
+  position: relative;
+}
+
+#s03 .s03-badge {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#s03 .s03-title {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+/* 貫穿中間的時間軸垂直線 */
+#s03 .s03-timeline-line {
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 50%;
+  width: 4px;
+  background-color: var(--accent-light);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* 時間軸中心節點 (正圓形，完全不受 Flex 影響) */
+#s03 .s03-timeline-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent-color);
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  box-shadow: 0 0 0 2px var(--accent-light);
+}
+
+/* 步驟卡片 */
+#s03 .s03-step-card {
+  border: 1px solid rgba(44, 53, 49, 0.12);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  z-index: 2;
+}
+
+#s03 .s03-step-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow-md);
+}
+
+#s03 .s03-step-number {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  line-height: 1;
+}
+
+#s03 .s03-step-tag {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+}
+
+/* 圖片容器與等高適應 */
+#s03 .s03-img-wrapper {
+  min-height: 320px;
+  border: 1px solid rgba(44, 53, 49, 0.08);
+  z-index: 2;
+}
+
+#s03 .s03-img-wrapper img {
+  transition: transform var(--transition-slow);
+}
+
+#s03 .s03-img-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+/* ==========================================================================
+   S04 誘捕工具與裝備解密樣式 (以 #s04 進行範圍限定)
+   ========================================================================== */
+
+#s04 {
+  background-color: var(--bg-main);
+  position: relative;
+}
+
+#s04 .s04-badge {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#s04 .s04-title {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+/* 裝備卡片樣式與 Hover 效果 */
+#s04 .s04-card {
+  border: 1px solid rgba(44, 53, 49, 0.12);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+#s04 .s04-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow-md);
+}
+
+#s04 .s04-icon-box {
+  width: 52px;
+  height: 52px;
+  background-color: var(--accent-light);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+#s04 .s04-tag {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+}
+
+/* 點擊游標與微互動指示 */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+#s04 .s04-more-link i {
+  transition: transform var(--transition-fast);
+}
+
+#s04 .s04-card:hover .s04-more-link i {
+  transform: translateX(4px);
+}
+
+/* 底部行動呼籲按鈕樣式 */
+#s04 .s04-btn-custom {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  transition: background-color var(--transition-normal), transform var(--transition-normal);
+}
+
+#s04 .s04-btn-custom:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
 /* RWD 手機端選單微調 */
 @media (max-width: 991.98px) {
-    .custom-navbar .navbar-collapse {
-        background-color: var(--bg-main);
-        padding: 20px;
-        margin-top: 10px;
-        border-radius: var(--radius-md);
-        box-shadow: var(--shadow-md);
-        border: 1px solid var(--border-color);
-    }
+  .custom-navbar .navbar-collapse {
+    background-color: var(--bg-main);
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+  }
+
+  /* 響應式：手機板自動隱藏中間時間軸，調整圖片高度 */
+  #s03 .s03-img-wrapper {
+    min-height: 240px;
+    height: 240px;
+  }
 }
