@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TNVR 配色實機預覽</title>
+  <style>
+    /* ==========================================================================
+       全域配色變數 (Design Tokens)
+       ========================================================================== */
+    :root {
+      /* 1. 主色 (莫蘭迪泥灰) */
+      --primary-color: #2C3531;
+      --primary-hover: #1E2522;
+      --primary-light: #E8ECE9;
+
+      /* 2. 強調色 (暖大地砂黃) */
+      --accent-color: #D4A373;
+      --accent-hover: #BC8A5A;
+      --accent-light: #FAF0E6;
+
+      /* 3. 背景與區塊色 */
+      --bg-main: #F7F4EF;     /* 燕麥米色背景 */
+      --bg-card: #FFFFFF;     /* 純白卡片 */
+      --bg-alt: #EFECE6;      /* 交錯 Section 背景 */
+      --bg-dark: #1A221E;     /* 深石墨綠灰 */
+
+      /* 4. 文字階梯 */
+      --text-main: #2C3531;
+      --text-muted: #6C757D;
+      --text-light: #F8F9FA;
+
+      /* 5. 邊框與功能色 */
+      --border-color: #E2E8F0;
+      --success-color: #4A7C59;
+      --danger-color: #C94A29;
+
+      /* 6. 圓角與陰影 */
+      --radius-md: 12px;
+      --radius-pill: 50px;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    /* 基礎重設 */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    /* 色塊展示格 */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .color-card {
+      padding: 20px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* 實際 UI 元件模擬區 */
+    .preview-section {
+      background-color: var(--bg-card);
+      padding: 32px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      margin-bottom: 30px;
+    }
+
+    .preview-tag {
+      display: inline-block;
+      background-color: var(--accent-light);
+      color: var(--accent-hover);
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .preview-title {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .preview-desc {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-color);
+      color: #FFF;
+      border: none;
+      padding: 10px 24px;
+      border-radius: var(--radius-pill);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+    }
+
+    /* 深色區塊模擬 (Hero / Footer) */
+    .dark-section {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      padding: 32px;
+      border-radius: var(--radius-md);
+    }
+
+    .dark-section .btn-primary {
+      background-color: var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎨 色彩調色盤預覽</h1>
+
+    <!-- 色塊直接展示 -->
+    <div class="color-grid">
+      <div class="color-card" style="background-color: var(--primary-color); color: var(--text-light);">主色<br>莫蘭迪泥灰</div>
+      <div class="color-card" style="background-color: var(--accent-color); color: #FFF;">強調色<br>暖大地砂黃</div>
+      <div class="color-card" style="background-color: var(--bg-main); border: 1px solid var(--border-color);">背景色<br>燕麥米色</div>
+      <div class="color-card" style="background-color: var(--bg-dark); color: var(--text-light);">深色區塊<br>石墨綠灰</div>
+    </div>
+
+    <!-- 亮色內容卡片模擬 -->
+    <div class="preview-section">
+      <span class="preview-tag">S03 TNVR 流程範例</span>
+      <h2 class="preview-title">Trap (捕捉) - 人道誘捕規範</h2>
+      <p class="preview-desc">這是在燕麥米色背景上記錄的卡片效果，內文採用深泥灰與次要中灰色，確保長篇閱讀時眼睛舒適、不刺眼。</p>
+      <button class="btn-primary">探索誘捕裝備</button>
+    </div>
+
+    <!-- 深色區塊模擬 -->
+    <div class="dark-section">
+      <span class="preview-tag" style="background-color: rgba(212,163,115,0.2); color: var(--accent-color);">S01 Hero Banner 模擬</span>
+      <h2 style="font-size: 1.8rem; margin: 12px 0;">以絕育代替撲殺，終結無家可歸的循環</h2>
+      <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">深石墨綠灰背景能營造出沈穩大氣的強烈視覺張力。</p>
+      <button class="btn-primary">了解 TNVR 理念</button>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+/* ==========================================================================
+   TNVR 浪浪絕育宣導 SPA - 全域風格與配色樣式表
+   風格：人文雜誌風 (莫蘭迪泥灰 × 暖大地砂黃)
+   字體組合：標題 - 思源宋體 (Noto Serif TC) | 內文 - 思源黑體 (Noto Sans TC)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. 引入外部資源 (Google Fonts & Font Awesome 6)
+   -------------------------------------------------------------------------- */
+/* Google Fonts (思源黑體 + 思源宋體) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap');
+
+/* Font Awesome 6 Free */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+/* --------------------------------------------------------------------------
+   1. 全域配色與 Design Tokens (CSS :root)
+   -------------------------------------------------------------------------- */
+:root {
+    /* 品牌主要配色 (莫蘭迪泥灰) */
+    --primary-color: #2C3531;
+    /* 主色：深泥灰 (用於標題、重要框線) */
+    --primary-hover: #1E2522;
+    /* 深泥灰 Hover 狀態 */
+    --primary-light: #E8ECE9;
+    /* 淡泥灰襯底 */
+
+    /* 品牌強調色 (暖大地砂黃) */
+    --accent-color: #D4A373;
+    /* 強調色：暖砂黃 (用於 CTA 按鈕、Hotspot 標記、剪耳重點) */
+    --accent-hover: #BC8A5A;
+    /* 暖砂黃 Hover 狀態 */
+    --accent-light: #FAF0E6;
+    /* 淡砂黃襯底 (用於標籤、提示框) */
+
+    /* 背景與區塊色系 */
+    --bg-main: #F7F4EF;
+    /* 燕麥米色 (全站預設背景，溫暖親和、襯托照片) */
+    --bg-card: #FFFFFF;
+    /* 純白 (卡片與對比層級容器) */
+    --bg-alt: #EFECE6;
+    /* 深燕麥米 (交錯 Section 區隔) */
+    --bg-dark: #1A221E;
+    /* 深石墨綠灰 (用於 S01 Hero 與 S15 Footer 暗色沉浸區塊) */
+
+    /* 文字階梯 (Typography Palette) */
+    --text-main: #2C3531;
+    /* 主文字：深泥灰 (閱讀舒適) */
+    --text-muted: #6C757D;
+    /* 次要文字：中灰 (說明文字、出處標註) */
+    --text-light: #F8F9FA;
+    /* 亮色文字 (暗色背景專用) */
+
+    /* 邊框與結構線條 */
+    --border-color: #E2E8F0;
+    /* 卡片與區塊邊框線 */
+    --timeline-line: #CBD5E1;
+    /* S03 時間軸貫穿線條色 */
+
+    /* 功能狀態色 */
+    --success-color: #4A7C59;
+    /* 正確/Dos 規範標記 (綠) */
+    --danger-color: #C94A29;
+    /* 警告/Don'ts 規範標記 (紅) */
+
+    /* 字體宣告 (Font Families) */
+    --font-serif: 'Noto Serif TC', serif;
+    /* 大標題、Hero 標語、故事牆標題 */
+    --font-sans: 'Noto Sans TC', sans-serif;
+    /* 全站內文、導覽列、按鈕、數據數字 */
+
+    /* 圓角規範 */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-pill: 50px;
+
+    /* 陰影規範 */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.1);
+
+    /* 動畫過渡 */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   2. 全域基礎設定 (Base Layout & Typography)
+   -------------------------------------------------------------------------- */
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 標題套用思源宋體，建立人文雜誌感 */
+h1,
+h2,
+h3,
+.section-title,
+.hero-title {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -0.02em;
+}
+
+/* 通用 Section 留白規範 */
+section {
+    padding: 90px 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. Bootstrap Custom Navbar 覆蓋樣式
+   -------------------------------------------------------------------------- */
+.custom-navbar {
+    height: 72px;
+    background-color: rgba(247, 244, 239, 0.88) !important;
+    /* 燕麥米半透明 */
+    backdrop-filter: blur(10px);
+    /* 毛玻璃效果 */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(44, 53, 49, 0.08);
+    transition: all var(--transition-normal);
+}
+
+.custom-navbar .navbar-brand {
+    color: var(--primary-color);
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+}
+
+.custom-navbar .logo-icon {
+    font-size: 1.4rem;
+}
+
+.custom-navbar .nav-link {
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active,
+.custom-navbar .show>.nav-link {
+    color: var(--accent-hover) !important;
+    background-color: var(--accent-light);
+}
+
+/* Navbar 下拉選單 */
+.custom-dropdown {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md) !important;
+    padding: 8px;
+    margin-top: 8px !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.custom-dropdown .dropdown-item {
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.custom-dropdown .dropdown-item:hover {
+    background-color: var(--accent-light);
+    color: var(--accent-hover);
+}
+
+/* 1959 緊急通報按鈕 */
+.btn-emergency {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    box-shadow: 0 2px 8px rgba(212, 163, 115, 0.3);
+    transition: all var(--transition-fast);
+}
+
+.btn-emergency:hover {
+    background-color: var(--accent-hover);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   S01 Hero Banner 首屏視覺樣式 (修正版)
+   ========================================================================== */
+
+#s01 {
+  position: relative;
+  height: 100vh;
+  min-height: 680px;
+  background-color: var(--bg-dark);
+  overflow: hidden;
+  padding: 0;
+}
+
+/* 將輪播牆設定為絕對定位，鋪滿整個 Section 底層 */
+#s01 .hero-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#s01 .carousel-inner,
+#s01 .carousel-item {
+  height: 100%;
+}
+
+#s01 .hero-slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  transform: scale(1.05); /* 輕微放大，營造沉浸感 */
+  transition: transform 8s ease;
+}
+
+#s01 .carousel-item.active .hero-slide-bg {
+  transform: scale(1);
+}
+
+/* 深色高質感漸層遮罩 (Z-index: 1，壓在圖片上方、文字下方) */
+#s01 .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 34, 30, 0.75) 0%,
+    rgba(26, 34, 30, 0.55) 50%,
+    rgba(26, 34, 30, 0.85) 100%
+  );
+  z-index: 1;
+  pointer-events: none; /* 確保不影響點擊事件 */
+}
+
+/* 文字內容區域 (Z-index: 2，確保浮在最上層) */
+#s01 .hero-container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+#s01 .hero-badge {
+  background-color: rgba(212, 163, 115, 0.2);
+  color: var(--accent-color);
+  border: 1px solid rgba(212, 163, 115, 0.4);
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#s01 .hero-title {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.25;
+  letter-spacing: -1px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+#s01 .hero-subtitle {
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+/* Hero 按鈕樣式 */
+#s01 .btn-hero-primary {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 16px rgba(212, 163, 115, 0.3);
+  transition: all var(--transition-fast);
+}
+
+#s01 .btn-hero-primary:hover {
+  background-color: var(--accent-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 163, 115, 0.4);
+}
+
+#s01 .btn-hero-outline {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  transition: all var(--transition-fast);
+}
+
+#s01 .btn-hero-outline:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Scroll Down 浮動圖示動畫 */
+#s01 .scroll-down-indicator {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+  z-index: 2;
+}
+
+#s01 .scroll-down-indicator:hover {
+  opacity: 1;
+}
+
+#s01 .bounce-icon {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-8px); }
+  60% { transform: translateY(-4px); }
+}
+
+/* ==========================================================================
+   S02 現狀與危機區塊樣式 (以 #s02 進行範圍限定)
+   ========================================================================== */
+
+#s02 {
+  background-color: var(--bg-main); /* 燕麥米色背景，與 S01 的深色做出區隔 */
+  position: relative;
+}
+
+/* 小標籤樣式 */
+#s02 .s02-badge {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#s02 .s02-title {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+/* 卡片互動與質感設計 */
+#s02 .s02-card {
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  border-top: 4px solid var(--accent-color) !important; /* 頂部點綴暖砂黃邊框 */
+}
+
+#s02 .s02-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md) !important;
+}
+
+#s02 .s02-card-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* RWD 手機端選單微調 */
+@media (max-width: 991.98px) {
+    .custom-navbar .navbar-collapse {
+        background-color: var(--bg-main);
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border-color);
+    }
+}

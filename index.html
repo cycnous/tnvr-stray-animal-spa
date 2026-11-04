@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNVR 浪浪絕育宣導</title>
+    <!-- 引入 Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入我們自訂的 style.css (放在 Bootstrap 後面以進行覆蓋) -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- 全域固定導覽列 -->
+    <header id="navbar">
+        <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+            <div class="container">
+                <!-- 品牌 Logo -->
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#s01">
+                    <i class="fa-solid fa-paw logo-icon"></i>
+                    <span class="logo-text fw-bold">浪浪 TNVR 宣導網</span>
+                </a>
+
+                <!-- Bootstrap 漢堡選單按鈕 -->
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切換導覽選單">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 導覽連結與右側按鈕 -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
+                        <!-- 首頁 -->
+                        <li class="nav-item">
+                            <a class="nav-link px-3 active" href="#s01">首頁</a>
+                        </li>
+
+                        <!-- 下拉選單 1：核心觀念 -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" id="coreDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                核心觀念
+                            </a>
+                            <ul class="dropdown-menu custom-dropdown shadow-sm border-0" aria-labelledby="coreDropdown">
+                                <li><a class="dropdown-item" href="#s02">現狀與危機</a></li>
+                                <li><a class="dropdown-item" href="#s03">TNVR 4 步驟</a></li>
+                                <li><a class="dropdown-item" href="#s04">誘捕工具解密</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- 下拉選單 2：知識與互動 -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" id="interactiveDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                知識與互動
+                            </a>
+                            <ul class="dropdown-menu custom-dropdown shadow-sm border-0"
+                                aria-labelledby="interactiveDropdown">
+                                <li><a class="dropdown-item" href="#s05">全台數據看板</a></li>
+                                <li><a class="dropdown-item" href="#s06">剪耳與肢體語言</a></li>
+                                <li><a class="dropdown-item" href="#s07">結紮迷思解密</a></li>
+                                <li><a class="dropdown-item" href="#s08">浪浪命運抉擇</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- 下拉選單 3：社區與行動 -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" id="actionDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                社區與行動
+                            </a>
+                            <ul class="dropdown-menu custom-dropdown shadow-sm border-0"
+                                aria-labelledby="actionDropdown">
+                                <li><a class="dropdown-item" href="#s10">社區友善餵養</a></li>
+                                <li><a class="dropdown-item" href="#s11">全台合作診所</a></li>
+                                <li><a class="dropdown-item" href="#s12">應援與志工表單</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- 關於專案 -->
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#s14">關於專案</a>
+                        </li>
+                    </ul>
+
+                    <!-- 1959 緊急通報按鈕 -->
+                    <div class="d-flex align-items-center mt-3 mt-lg-0">
+                        <a href="tel:1959"
+                            class="btn btn-emergency rounded-pill w-100 w-lg-auto px-4 py-2 d-flex align-items-center justify-content-center gap-2">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>1959 動保專線</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- S01: Hero Banner 視覺首屏 -->
+    <section id="s01" class="hero-section p-0 position-relative overflow-hidden">
+        <!-- Bootstrap Carousel 背景輪播牆 -->
+        <div id="heroCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel"
+            data-bs-interval="5000">
+            <div class="carousel-inner h-100">
+                <!-- Slide 1 -->
+                <div class="carousel-item active h-100">
+                    <div class="hero-slide-bg" style="background-image: url('images/hero/s01-1.avif');"></div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item h-100">
+                    <div class="hero-slide-bg" style="background-image: url('images/hero/s01-2.avif');"></div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item h-100">
+                    <div class="hero-slide-bg" style="background-image: url('images/hero/s01-3.avif');"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 深色漸層遮罩 (確保文字極致清晰) -->
+        <div class="hero-overlay"></div>
+
+        <!-- 前景內容文字層 -->
+        <div class="container hero-container position-relative z-2 h-100 d-flex align-items-center">
+            <div class="row w-100 justify-content-center text-center">
+                <div class="col-lg-10 col-xl-9">
+                    <!-- 議題小標籤 -->
+                    <div class="d-inline-flex align-items-center gap-2 hero-badge mb-4 wow fadeInDown">
+                        <i class="fa-solid fa-paw"></i>
+                        <span>TNVR 浪浪絕育宣導專題</span>
+                    </div>
+
+                    <!-- 主標題 (思源宋體) -->
+                    <h1 class="hero-title text-white mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                        以絕育代替撲殺，<br class="d-none d-md-inline">終結無家可歸的循環。
+                    </h1>
+
+                    <!-- 副標題 -->
+                    <p class="hero-subtitle text-white-50 mb-5 fs-5 mx-auto wow fadeInUp" data-wow-delay="0.4s"
+                        style="max-width: 680px;">
+                        理解 TNVR（捕捉、絕育、疫苗、回置），讓愛與科學防範在巷弄間並行，<br>給街頭生命一個更有尊嚴的未來。
+                    </p>
+
+                    <!-- CTA 按鈕組 -->
+                    <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center gap-3 wow fadeInUp"
+                        data-wow-delay="0.6s">
+                        <a href="#s02" class="btn btn-hero-primary rounded-pill px-4 py-3 fw-bold">
+                            探索 TNVR 核心理念 <i class="fa-solid fa-arrow-down ms-2"></i>
+                        </a>
+                        <a href="#s05" class="btn btn-hero-outline rounded-pill px-4 py-3 fw-bold">
+                            查看全台浪浪數據 <i class="fa-solid fa-chart-line ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部向下滾動提示 Indicator -->
+        <a href="#s02"
+            class="scroll-down-indicator text-white text-decoration-none position-absolute bottom-0 start-50 translate-middle-x mb-4 z-2">
+            <span class="d-block small mb-1 opacity-75">SCROLL</span>
+            <i class="fa-solid fa-chevron-down bounce-icon"></i>
+        </a>
+    </section>
+
+    <!-- S02: 流浪動物現狀與危機 -->
+    <section id="s02" class="s02-section py-5">
+        <div class="container py-4">
+            <!-- 區塊標題群 -->
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="s02-badge mb-3 d-inline-block">現狀與挑戰</span>
+                    <h2 class="s02-title fw-bold mb-3">街頭生存的困境：為什麼捕捉無法解決問題？</h2>
+                    <p class="s02-subtitle text-muted fs-5">
+                        長久以來，單純依靠「捕捉與收容」不僅無法根絕流浪動物問題，<br>更陷入了治標不治本的無限迴圈。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 三大痛點卡片網格 -->
+            <div class="row g-4 justify-content-center">
+                <!-- 卡片 1：真空效應 -->
+                <div class="col-md-6 col-lg-4">
+                    <div
+                        class="s02-card h-100 p-4 rounded-4 shadow-sm bg-white border-0 position-relative overflow-hidden">
+                        <div class="s02-card-icon mb-3">
+                            <i class="fa-solid fa-rotate text-accent"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">無限迴圈的「真空效應」</h3>
+                        <p class="text-muted mb-0">
+                            當某個區域的浪浪被全數捕捉移除後，該處的食物與生存資源依然存在，外地或周邊的浪浪會立刻遞補進來，導致數量不減反增。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 卡片 2：收容資源超載 -->
+                <div class="col-md-6 col-lg-4">
+                    <div
+                        class="s02-card h-100 p-4 rounded-4 shadow-sm bg-white border-0 position-relative overflow-hidden">
+                        <div class="s02-card-icon mb-3">
+                            <i class="fa-solid fa-house-chimney-crack text-accent"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">公立收容資源有限</h3>
+                        <p class="text-muted mb-0">
+                            收容所空間與人力終究有限。面對源源不絕的捕捉數量，收容品質容易下降，也無法給予每一隻動物妥善的終身照顧。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 卡片 3：人獸衝突與壓力 -->
+                <div class="col-md-6 col-lg-4">
+                    <div
+                        class="s02-card h-100 p-4 rounded-4 shadow-sm bg-white border-0 position-relative overflow-hidden">
+                        <div class="s02-card-icon mb-3">
+                            <i class="fa-solid fa-triangle-exclamation text-accent"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">生存壓力與社會衝突</h3>
+                        <p class="text-muted mb-0">
+                            未絕育的浪浪在發情期因爭奪地盤、求偶而產生的噪音、打架，往往加劇了社區居民與流浪動物之間的對立與衝突。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
