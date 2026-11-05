@@ -808,12 +808,13 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(250, 247, 242, 0.7); /* 配合你的米色基底 (#FAF7F2) 與高透明度 */
+  background-color: rgba(250, 247, 242, 0.7);
+  /* 配合你的米色基底 (#FAF7F2) 與高透明度 */
   z-index: 1;
 }
 
 /* 讓文字與卡牌內容浮在遮罩上方 */
-.s07-flip-front > * {
+.s07-flip-front>* {
   position: relative;
   z-index: 2;
 }
@@ -1091,11 +1092,6 @@ section {
    S13 應援與志工參與表單樣式
    ========================================================================== */
 
-/* #s13 {
-  background-color: #FAF7F2;
-  /* 採用暖大地砂黃極淺色作為區塊背景，與前後區塊做出區隔 */
-} */
-
 #s13 .s13-badge {
   background-color: var(--accent-light);
   color: var(--accent-hover);
@@ -1135,6 +1131,24 @@ section {
   background-color: var(--accent-hover);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(44, 53, 49, 0.15);
+}
+
+/* 自訂 SweetAlert2 彈窗外觀以符合網站風格 */
+.swal2-popup {
+  font-family: inherit;
+  /* 繼承你設定的字型 */
+}
+
+.swal2-confirm {
+  padding: 0.6rem 2rem !important;
+  border-radius: 50rem !important;
+  /* 圓角膠囊按鈕 */
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
+.swal2-confirm:hover {
+  opacity: 0.9;
 }
 
 /* ==========================================================================
@@ -1233,6 +1247,10 @@ section {
 /* ==========================================================================
    Footer 頁尾樣式
    ========================================================================== */
+
+#footer .footer-accent-color {
+  color: var(--accent-color) !important;
+}
 
 #footer .letter-spacing-1 {
   letter-spacing: 1px;

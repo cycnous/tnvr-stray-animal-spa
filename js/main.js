@@ -1,3 +1,5 @@
+new WOW().init();
+
 // counterUp 計數動畫工具
 const counterUp = window.counterUp.default;
 
