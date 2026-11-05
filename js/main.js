@@ -110,17 +110,9 @@ function selectChoice(stage, option, element) {
 
         // 5. 判斷 A/B 還是 C
         if (data.hasNextStage) {
-            // 選 C：展開第二階段，並平滑捲動到第二階段
+            // 選 C：展開第二階段
             $stage2.removeClass('d-none');
-            $('html, body').stop().animate({
-                scrollTop: $stage2.offset().top - 80
-            }, 600);
-        } else {
-            // 選 A 或 B：捲動到結局一面板
-            $('html, body').stop().animate({
-                scrollTop: $result1.offset().top - 100
-            }, 500);
-        }
+        } 
     }
 
     // ==========================================
@@ -145,10 +137,5 @@ function selectChoice(stage, option, element) {
         $result2.removeClass('d-none animate__animated animate__zoomIn animate__zoomIn').html(htmlContent);
         if ($result2.length > 0) { void $result2[0].offsetWidth; }
         $result2.addClass('animate__animated animate__zoomIn');
-
-        // 4. 平滑捲動至結局二面板
-        $('html, body').stop().animate({
-            scrollTop: $result2.offset().top - 100
-        }, 500);
     }
 }

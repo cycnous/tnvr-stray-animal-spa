@@ -404,8 +404,8 @@ section {
 }
 
 #s02 .s02-card-icon {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   background-color: var(--accent-light);
   border-radius: 50%;
   display: flex;
@@ -546,8 +546,8 @@ section {
 }
 
 #s04 .s04-icon-box {
-  width: 52px;
-  height: 52px;
+  width: 80px;
+  height: 80px;
   background-color: var(--accent-light);
   border-radius: 14px;
   display: flex;
@@ -618,10 +618,10 @@ section {
 
 /* 效益圖標盒 */
 #s05 .s05-icon-box {
-  width: 48px;
-  height: 48px;
+  width: 85px;
+  height: 85px;
   background-color: var(--accent-light);
-  border-radius: 12px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -796,8 +796,26 @@ section {
 
 /* 正面樣式 */
 #s07 .s07-flip-front {
+  background-image: url(../images/s07-card.avif);
+  background-size: cover;
+  background-position: center;
   background-color: var(--bg-main);
   border: 1px solid rgba(44, 53, 49, 0.1) !important;
+}
+
+/* 加上一層半透明的白/米色遮罩，保護文字可讀性 */
+.s07-flip-front::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(250, 247, 242, 0.7); /* 配合你的米色基底 (#FAF7F2) 與高透明度 */
+  z-index: 1;
+}
+
+/* 讓文字與卡牌內容浮在遮罩上方 */
+.s07-flip-front > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* 背面樣式（採用深莫蘭迪主色調作為專業解答底色） */
@@ -1073,10 +1091,10 @@ section {
    S13 應援與志工參與表單樣式
    ========================================================================== */
 
-#s13 {
+/* #s13 {
   background-color: #FAF7F2;
   /* 採用暖大地砂黃極淺色作為區塊背景，與前後區塊做出區隔 */
-}
+} */
 
 #s13 .s13-badge {
   background-color: var(--accent-light);
