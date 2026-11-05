@@ -592,6 +592,677 @@ section {
   transform: translateY(-2px);
 }
 
+/* ==========================================================================
+   S05 TNVR 效益與全台數據看板樣式
+   ========================================================================== */
+
+#s05 {
+  background-color: var(--bg-card);
+  position: relative;
+}
+
+#s05 .s05-badge {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#s05 .s05-title {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+/* 效益圖標盒 */
+#s05 .s05-icon-box {
+  width: 48px;
+  height: 48px;
+  background-color: var(--accent-light);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  font-size: 1.3rem;
+}
+
+/* 圖片容器 */
+#s05 .s05-img-wrapper {
+  min-height: 380px;
+  height: 100%;
+}
+
+#s05 .s05-img-caption {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+/* 數據看板區塊 */
+#s05 .s05-dashboard {
+  background-color: var(--bg-main);
+  border-color: rgba(44, 53, 49, 0.12) !important;
+}
+
+#s05 .s05-live-tag {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+}
+
+#s05 .s05-counter-card {
+  border: 1px solid rgba(44, 53, 49, 0.08) !important;
+  transition: transform var(--transition-normal);
+}
+
+#s05 .s05-counter-card:hover {
+  transform: translateY(-3px);
+}
+
+#s05 .s05-counter-num {
+  font-family: var(--font-serif);
+  color: var(--accent-color) !important;
+}
+
+/* S05 數據卡片註解微調 */
+#s05 .s05-card-note {
+  background-color: var(--bg-card);
+  border: 1px solid rgba(44, 53, 49, 0.06);
+  font-size: 0.82rem !important;
+  line-height: 1.4;
+  color: #555 !important;
+}
+
+/* 確保 4 張數據卡片高度一致且內容上下分散對齊 */
+#s05 .s05-counter-card {
+  min-height: 160px;
+}
+
+#s05 .s05-counter-card .text-muted.small {
+  font-size: 0.78rem !important;
+  color: #666 !important;
+}
+
+/* ==========================================================================
+   S06 剪耳與肢體語言解碼樣式
+   ========================================================================== */
+
+#s06 {
+  background-color: var(--bg-main);
+}
+
+#s06 .s06-badge {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#s06 .s06-title {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+/* 圖片容器 */
+#s06 .s06-img-container {
+  height: 400px;
+}
+
+/* 剪耳左右小卡片 */
+#s06 .s06-ear-card {
+  border-color: rgba(44, 53, 49, 0.08) !important;
+  transition: transform var(--transition-fast);
+}
+
+#s06 .s06-ear-card:hover {
+  transform: translateY(-3px);
+}
+
+/* 肢體語言卡片hover效果 */
+#s06 .s06-lang-item {
+  border-color: rgba(44, 53, 49, 0.08) !important;
+  transition: all var(--transition-fast);
+}
+
+#s06 .s06-lang-item:hover {
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   S07 結紮迷思大解密 3D 翻牌樣式
+   ========================================================================== */
+
+#s07 {
+  background-color: var(--bg-card);
+}
+
+#s07 .s07-badge {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#s07 .s07-title {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+/* 3D 翻牌容器設定 */
+/* 2x2 排版適用的卡片高度設定 */
+#s07 .s07-flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 320px;
+  /* 從 380px 縮至 320px，視覺更寬敞舒服 */
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+#s07 .s07-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+/* 點擊觸發翻轉 (.flipped 類別由 JS 的 onclick 切換) */
+#s07 .s07-flip-card.flipped .s07-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* 正面與背面共用設定 */
+#s07 .s07-flip-front,
+#s07 .s07-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+}
+
+/* 正面樣式 */
+#s07 .s07-flip-front {
+  background-color: var(--bg-main);
+  border: 1px solid rgba(44, 53, 49, 0.1) !important;
+}
+
+/* 背面樣式（採用深莫蘭迪主色調作為專業解答底色） */
+#s07 .s07-flip-back {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  transform: rotateY(180deg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   S08 浪浪命運抉擇樣式
+   ========================================================================== */
+
+#s08 {
+  background-color: var(--bg-main);
+}
+
+#s08 .s08-badge {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#s08 .s08-title {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+#s08 .s08-step-tag {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  letter-spacing: 0.5px;
+}
+
+/* 選擇卡片 */
+#s08 .s08-choice-card {
+  cursor: pointer;
+  border-color: rgba(44, 53, 49, 0.08) !important;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+#s08 .s08-choice-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+#s08 .s08-choice-card.active {
+  border-color: var(--accent-color) !important;
+  background-color: #FAF7F2 !important;
+}
+
+#s08 .s08-choice-letter {
+  width: 36px;
+  height: 36px;
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+#s08 .s08-choice-btn {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-hover);
+  background: transparent;
+  transition: all var(--transition-fast);
+}
+
+#s08 .s08-choice-card:hover .s08-choice-btn,
+#s08 .s08-choice-card.active .s08-choice-btn {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+/* 第二階段選擇卡片樣式（與第一階段保持一致） */
+#s08 .s08-choice-card-2 {
+  cursor: pointer;
+  border-color: rgba(44, 53, 49, 0.08) !important;
+  transition: all var(--transition-fast);
+}
+
+#s08 .s08-choice-card-2:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+#s08 .s08-choice-card-2.active {
+  border-color: var(--accent-color) !important;
+  background-color: #FAF7F2 !important;
+}
+
+#s08 .s08-choice-card-2:hover .s08-choice-btn,
+#s08 .s08-choice-card-2.active .s08-choice-btn {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+/* 結局面板樣式 */
+#s08 .s08-result-panel {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  transition: all 0.4s ease;
+}
+
+/* ==========================================================================
+   S10 浪浪生命故事牆樣式
+   ========================================================================== */
+
+#s10 .s10-badge {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#s10 .s10-title {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+/* 卡片本體 */
+#s10 .s10-story-card {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid rgba(44, 53, 49, 0.06) !important;
+}
+
+/* Hover 浮起效果 */
+#s10 .s10-story-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(44, 53, 49, 0.12) !important;
+}
+
+/* 圖片容器與 Zoom-In 放大動畫 */
+#s10 .s10-img-box {
+  height: 260px;
+  /* 統一卡片圖片高度 */
+  background-color: #f8f9fa;
+}
+
+#s10 .s10-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 自動裁切填滿，保持比例不變形 */
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* 滑鼠懸停時圖片平滑放大 (Zoom-In) */
+#s10 .s10-story-card:hover .s10-card-img {
+  transform: scale(1.08);
+}
+
+/* Before & After 對比框背景 */
+#s10 .s10-ba-box {
+  background-color: #FAF7F2;
+  /* 暖大地砂黃極淺底色 */
+  border-left: 3px solid var(--accent-color);
+}
+
+/* ==========================================================================
+   S11 社區友善餵養公約
+   ========================================================================== */
+
+#s11 .s11-badge {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#s11 .s11-title {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+/* 卡片容器樣式 */
+#s11 .s11-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-color: rgba(44, 53, 49, 0.08) !important;
+}
+
+#s11 .s11-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Dos & Don'ts 特殊頂部邊框線 */
+#s11 .s11-card-do {
+  border-top: 4px solid #2e7d32 !important;
+  /* 深森林綠 */
+}
+
+#s11 .s11-card-dont {
+  border-top: 4px solid #c62828 !important;
+  /* 莫蘭迪柔和紅 */
+}
+
+/* 圓形 Icon 容器 */
+#s11 .s11-icon-circle {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   S12 全台合作診所與醫院地圖樣式
+   ========================================================================== */
+
+#s12 .s12-badge {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#s12 .s12-title {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+/* 資源卡片懸停效果 */
+#s12 .s12-resource-card {
+  border: 1px solid rgba(44, 53, 49, 0.06) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#s12 .s12-resource-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(44, 53, 49, 0.1) !important;
+}
+
+/* 地圖按鈕互動 */
+#s12 .s12-map-btn {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+#s12 .s12-map-btn:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-color: var(--primary-color);
+}
+
+/* 底部 CTA 橫幅背景（採用莫蘭迪泥灰深色調） */
+#s12 .s12-cta-banner {
+  background-color: var(--primary-color);
+  box-shadow: 0 10px 30px rgba(44, 53, 49, 0.15);
+}
+
+/* ==========================================================================
+   S13 應援與志工參與表單樣式
+   ========================================================================== */
+
+#s13 {
+  background-color: #FAF7F2;
+  /* 採用暖大地砂黃極淺色作為區塊背景，與前後區塊做出區隔 */
+}
+
+#s13 .s13-badge {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#s13 .s13-title {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+/* 表單卡片容器 */
+#s13 .s13-form-wrapper {
+  border: 1px solid rgba(44, 53, 49, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(44, 53, 49, 0.04);
+}
+
+/* 輸入框聚焦時的莫蘭迪色框線 */
+#s13 .form-control:focus,
+#s13 .form-select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.25rem rgba(184, 150, 122, 0.25);
+  /* 帶有砂黃色調的聚焦光暈 */
+}
+
+/* 送出按鈕樣式 */
+#s13 .s13-submit-btn {
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+#s13 .s13-submit-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(44, 53, 49, 0.15);
+}
+
+/* ==========================================================================
+   S14 合作動保團體與夥伴樣式 (Grayscale to Color Hover)
+   ========================================================================== */
+
+#s14 .s14-badge {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#s14 .s14-title {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+/* 夥伴卡片本體 */
+#s14 .s14-partner-card {
+  border: 1px solid rgba(44, 53, 49, 0.08) !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: #ffffff;
+}
+
+/* 核心特效：預設黑白 (grayscale) 且略為透明 */
+#s14 .s14-partner-card .s14-partner-icon,
+#s14 .s14-partner-card img {
+  filter: grayscale(100%);
+  opacity: 0.55;
+  transition: filter 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* 核心特效：Hover 時還原 100% 彩色、微幅放大並升起 */
+#s14 .s14-partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(44, 53, 49, 0.08) !important;
+  border-color: var(--accent-color) !important;
+}
+
+#s14 .s14-partner-card:hover .s14-partner-icon,
+#s14 .s14-partner-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* 輔助文字字級 */
+.extra-small {
+  font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   S15 關於開發者與本專案樣式
+   ========================================================================== */
+
+#s15 .s15-badge {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#s15 .s15-title {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+#s15 .s15-card {
+  border: 1px solid rgba(44, 53, 49, 0.08) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#s15 .s15-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(44, 53, 49, 0.08) !important;
+}
+
+/* 技術標籤 Hover */
+#s15 .s15-tech-stack .badge {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease;
+}
+
+#s15 .s15-tech-stack .badge:hover {
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Footer 頁尾樣式
+   ========================================================================== */
+
+#footer .letter-spacing-1 {
+  letter-spacing: 1px;
+}
+
+/* 社群與聯絡圖示容器 */
+.footer-social-icon {
+  width: 38px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.footer-social-icon:hover {
+  background-color: var(--accent-color);
+  color: #ffffff !important;
+  transform: translateY(-3px);
+}
+
+/* 導航連結 Hover 效果 */
+.footer-links a {
+  transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-light) !important;
+  padding-left: 4px;
+}
+
+/* 小紅點呼吸燈動畫 */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 1.8s infinite;
+}
+
 /* RWD 手機端選單微調 */
 @media (max-width: 991.98px) {
   .custom-navbar .navbar-collapse {
