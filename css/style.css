@@ -811,6 +811,7 @@ section {
   background-color: rgba(250, 247, 242, 0.7);
   /* 配合你的米色基底 (#FAF7F2) 與高透明度 */
   z-index: 1;
+  pointer-events: none; /* 讓點擊穿透遮罩，直接點到卡片！ */
 }
 
 /* 讓文字與卡牌內容浮在遮罩上方 */
