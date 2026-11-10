@@ -1316,3 +1316,19 @@ section {
     height: 240px;
   }
 }
+
+@media screen and (max-width: 576px) {
+
+  /* 手機版移除固定 minimum 高度，讓容器高度跟著內容/圖片走 */
+  #s05 .s05-img-wrapper {
+    min-height: auto !important;
+    height: 260px;
+    /* 手機版給予適合的顯示高度 */
+  }
+
+  /* 確保圖片正確 cover 並填滿 260px 的高度 */
+  #s05 .s05-img-wrapper img {
+    height: 100% !important;
+    object-fit: cover;
+  }
+}
