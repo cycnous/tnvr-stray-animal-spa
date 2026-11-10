@@ -736,7 +736,7 @@ section {
 }
 
 /* ==========================================================================
-   S07 結紮迷思大解密 3D 翻牌樣式
+   S07 結紮迷思大解密 3D 翻牌樣式 (完整修正版)
    ========================================================================== */
 
 #s07 {
@@ -758,16 +758,19 @@ section {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
 }
 
-/* 3D 翻牌容器設定 */
-/* 2x2 排版適用的卡片高度設定 */
+/* 3D 翻牌容器設定 (鎖定原位，禁止上下位移) */
 #s07 .s07-flip-card {
   background-color: transparent;
   width: 100%;
   height: 320px;
-  /* 從 380px 縮至 320px，視覺更寬敞舒服 */
   perspective: 1000px;
-  -webkit-perspective: 1000px; /* 補上 Webkit 前綴 */
+  -webkit-perspective: 1000px;
   cursor: pointer;
+  transform: none !important;
+}
+
+#s07 .s07-flip-card:hover {
+  transform: none !important;
 }
 
 #s07 .s07-flip-card-inner {
@@ -777,18 +780,21 @@ section {
   text-align: center;
   transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
   transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d; /* 補上 Webkit 前綴 */
+  -webkit-transform-style: preserve-3d;
 }
 
 /* 點擊觸發翻轉 (.flipped 類別由 JS 的 onclick 切換) */
 #s07 .s07-flip-card.flipped .s07-flip-card-inner {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 /* 正面與背面共用設定 */
 #s07 .s07-flip-front,
 #s07 .s07-flip-back {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
@@ -796,37 +802,26 @@ section {
   border-radius: 1rem;
 }
 
-/* 正面樣式 */
+/* 正面樣式：使用內嵌漸層光暈確保背景圖柔和且手機點擊順暢 */
 #s07 .s07-flip-front {
-  background-image: url(../images/s07-card.avif);
+  background-image: linear-gradient(
+      rgba(250, 247, 242, 0.75), 
+      rgba(250, 247, 242, 0.75)
+    ), 
+    url('../images/s07-card.avif');
   background-size: cover;
   background-position: center;
   background-color: var(--bg-main);
   border: 1px solid rgba(44, 53, 49, 0.1) !important;
+  transform: none !important;
 }
 
-/* 加上一層半透明的白/米色遮罩，保護文字可讀性 */
-.s07-flip-front::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(250, 247, 242, 0.7);
-  /* 配合你的米色基底 (#FAF7F2) 與高透明度 */
-  z-index: 1;
-  pointer-events: none; /* 讓點擊穿透遮罩，直接點到卡片！ */
-}
-
-/* 讓文字與卡牌內容浮在遮罩上方 */
-.s07-flip-front>* {
-  position: relative;
-  z-index: 2;
-}
-
-/* 背面樣式（採用深莫蘭迪主色調作為專業解答底色） */
+/* 背面樣式：深莫蘭迪主色調解答底色 */
 #s07 .s07-flip-back {
   background-color: var(--primary-color);
   color: #ffffff;
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
